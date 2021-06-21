@@ -14,7 +14,7 @@ int main(void)
 	location* ptr = new location[caseNum];
 	for (int i = 0; i < caseNum; i++)
 	{
-		cin >> ptr[i].x1 >> ptr[i].x2 >> ptr[i].r1 >> ptr[i].y1 >> ptr[i].y2 >> ptr[i].r2;
+		cin >> ptr[i].x1 >> ptr[i].y1 >> ptr[i].r1 >> ptr[i].x2 >> ptr[i].y2 >> ptr[i].r2;
 		cin.clear();
 	}
 	for (int i = 0; i < caseNum; i++)
