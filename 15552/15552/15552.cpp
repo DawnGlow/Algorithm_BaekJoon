@@ -13,21 +13,21 @@ int main(void) {
 }
 
 /*
-±âº»ÀûÀ¸·Î »ç¿ëÇÏ´Â cin°ú coutÀº ÀÔÃâ·Â ¼Óµµ°¡ Á¶±Ý ´À¸².
-printf³ª scanf¸¦ »ç¿ëÇÏ¿©¼­ ¼Óµµ¸¦ ÁÙ¿©µµ µÇÁö¸¸
-cin°ú coutÀ» ÀÌ¿ëÇÒ ¶§ ¼Óµµ¸¦ ÁÙÀÌ´Â ¹æ¹ýÀÌ ÀÖ´Ù.
+ê¸°ë³¸ì ìœ¼ë¡œ ì‚¬ìš©í•˜ëŠ” cinê³¼ coutì€ ìž…ì¶œë ¥ ì†ë„ê°€ ì¡°ê¸ˆ ëŠë¦¼.
+printfë‚˜ scanfë¥¼ ì‚¬ìš©í•˜ì—¬ì„œ ì‹œê°„ì„ ì¤„ì—¬ë„ ë˜ì§€ë§Œ
+cinê³¼ coutì„ ì´ìš©í•  ë•Œ ì‹œê°„ì„ ì¤„ì´ëŠ” ë°©ë²•ì´ ìžˆë‹¤.
 
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 \n
 
-ÃÑ 3°¡ÁöÀÌ´Ù.
+ì´ 3ê°€ì§€ì´ë‹¤.
 1. ios_base::sync_with_stdio(false);
-±âº»ÀûÀ¸·Î iostreamÀº c¿Í c++ÀÇ ¹öÆÛ¸¦ µ¿±âÈ­ ÇØÁÖ±â ¶§¹®¿¡ µô·¹ÀÌ°¡ ¹ß»ýÇÑ´Ù.ÇÏÁö¸¸ ios_base::sync_with_stdio(false)´Â µ¿±âÈ­¸¦ ²÷¾îÁÜÀ¸·Î½á ¼Óµµ°¡ »¡¶óÁø´Ù.
-¶ÇÇÑ, µ¿±âÈ­¸¦ ²÷¾îÁáÀ¸¹Ç·Î, ´õÀÌ»ó cÀÇ ÀÔÃâ·Â ¹æ½ÄÀÎ printf scanf putchar() µîµîÀ» »ç¿ëÇÏ¸é ¾ÈµÈ´Ù.
+ê¸°ë³¸ì ìœ¼ë¡œ iostreamì€ cì™€ c++ì˜ ë²„í¼ë¥¼ ë™ê¸°í™” í•´ì£¼ê¸° ë•Œë¬¸ì— ë”œë ˆì´ê°€ ë°œìƒí•œë‹¤.í•˜ì§€ë§Œ ios_base::sync_with_stdio(false)ëŠ” ë™ê¸°í™”ë¥¼ ëŠì–´ì¤Œìœ¼ë¡œì¨ ì†ë„ê°€ ë¹¨ë¼ì§„ë‹¤.
+ë˜í•œ, ë™ê¸°í™”ë¥¼ ëŠì–´ì¤¬ìœ¼ë¯€ë¡œ, ë”ì´ìƒ cì˜ ìž…ì¶œë ¥ ë°©ì‹ì¸ printf scanf putchar() ë“±ë“±ì„ ì‚¬ìš©í•˜ë©´ ì•ˆëœë‹¤.
 2. cin.tie(NULL)
-±âº»ÀûÀ¸·Î cinÀ¸·Î ÀÐÀ» ¶§ ¸ÕÀú Ãâ·Â¹öÆÛ(cout °°Àº °Í)À» ºñ¿ì´Âµ¥, BOJ¿¡¼­´Â ÀÔ·ÂÀ» ÇÑ¹ø¿¡ ´Ù ¹Þ°í Ãâ·ÂÇÏ±â ¶§¹®¿¡ ¹öÆÛ¸¦ ºñ¿ï ÇÊ¿ä°¡ ¾ø´Ù. µû¶ó¼­
-cin.tie(NULL)À» ÀÌ¿ëÇÏ¸é ½Ã°£À» ÁÙÀÏ ¼ö ÀÖ´Ù.
+ê¸°ë³¸ì ìœ¼ë¡œ cinìœ¼ë¡œ ì½ì„ ë•Œ ë¨¼ì € ì¶œë ¥ë²„í¼(cout ê°™ì€ ê²ƒ)ì„ ë¹„ìš°ëŠ”ë°, BOJì—ì„œëŠ” ìž…ë ¥ì„ í•œë²ˆì— ë‹¤ ë°›ê³  ì¶œë ¥í•˜ê¸° ë•Œë¬¸ì— ë²„í¼ë¥¼ ë¹„ìš¸ í•„ìš”ê°€ ì—†ë‹¤. ë”°ë¼ì„œ
+cin.tie(NULL)ì„ ì´ìš©í•˜ë©´ ì‹œê°„ì„ ì¤„ì¼ ìˆ˜ ìžˆë‹¤.
 3. \n
-endlÀº Ãâ·Â¹öÆÛ±îÁö ºñ¿ì´Â ¿ªÇÒÀ» ÇÏ´Âµ¥, ÀÌ ÀÛ¾÷ÀÌ ¸Å¿ì ´À¸®´Ù. BOJ¿¡¼­´Â ¹«¾ùÀÌ Ãâ·ÂµÇ´Â°¡°¡ Áß¿äÇÏ±â ¶§¹®¿¡ \nÀ¸·Î¸¸ ¹Ù²ãµµ ½Ã°£À» ÁÙÀÏ ¼ö ÀÖ´Ù.
+endlì€ ì¶œë ¥ë²„í¼ê¹Œì§€ ë¹„ìš°ëŠ” ì—­í• ì„ í•˜ëŠ”ë°, ì´ ìž‘ì—…ì´ ë§¤ìš° ëŠë¦¬ë‹¤. BOJì—ì„œëŠ” ë¬´ì—‡ì´ ì¶œë ¥ë˜ëŠ”ê°€ê°€ ì¤‘ìš”í•˜ê¸° ë•Œë¬¸ì— \nìœ¼ë¡œë§Œ ë°”ê¿”ë„ ì‹œê°„ì„ ì¤„ì¼ ìˆ˜ ìžˆë‹¤.
 */
