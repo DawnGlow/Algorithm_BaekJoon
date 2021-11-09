@@ -1,27 +1,30 @@
 #include <iostream>
+#include <string>
 using namespace std;
-main() {
-    ios_base::sync_with_stdio(false);
-    int num;
-    double max = 0;
-    double sum = 0;
-    cin >> num;
-    double array[num];
-    for (int i = 0; i++ < num;) {
-        cin >> array[i];
-        if (array[i] > max) {
-            max = array[i];
+main () {
+    int count, O_num = 1, score = 0;
+    cin >> count;
+    string ox;
+    for (int i = 0; i++ < count;) {
+        cin >> ox;
+        for (int j = 0; j < ox.length(); j++) {
+            if (ox.at(j) == 'O') {
+                score += O_num;
+                O_num++;
+            }
+            else
+            {
+                O_num = 1;
+            }
+            
         }
+        cout << score << "\n";
+        score = 0;
     }
-    for (int i = 0; i++ < num;) {
-        array[i] = array[i] / max * 100.0;
-        sum += array[i];
-    }
-    cout << sum / (double)num;
 }
-// 고민해볼 문제
+
 /*
-비교를 할때는 초기화를 꼭 해주자.
-cin.tie(NULL)은 조심해서 쓰자.
-나누기 과정에서 몫을 구할때는 제외하곤 double을 이용하자.
+for문을 이중 이상으로 사용할 때, 초기화 해야할 변수가 있는지 꼭 확인하자.
+for (int i = 0; i++ <~~ ) 이 방식은 i 값을 for문 안에서 사용하지 않을때만 사용하자
+
 */
