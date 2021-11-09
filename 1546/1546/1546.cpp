@@ -2,24 +2,22 @@
 using namespace std;
 main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
     int num;
-    int max;
-    double sum;
+    double max = 0;
+    double sum = 0;
     cin >> num;
-    int array[num];
+    double array[num];
     for (int i = 0; i++ < num;) {
         cin >> array[i];
-    }
-    for (int i = 0; i++ < num;) {
         if (array[i] > max) {
             max = array[i];
         }
     }
     for (int i = 0; i++ < num;) {
-        sum += (double)array[i] / (double)max * 100.0 ;
+        array[i] = array[i] / max * 100.0;
+        sum += array[i];
     }
-    cout << fixed;
-	cout.precision(6);
-    cout << sum / static_cast<double>(num);
+    cout << sum / (double)num;
 }
+
+// 고민해볼 문제
