@@ -12,7 +12,11 @@ int self_number(int a) {
 main () {
     bool creator[10000] = { false, };
     for (int i = 0; i < 9999; i++) {
-        creator[self_number(i + 1)] = true;
+        int b;
+        b = self_number(i+1);
+        if (self_number(i+1) >= 9999)
+            break;
+        creator[b] = true;
     }
     for (int i = 1; i <= 9999; i++) {
         if (creator[i] == false)
