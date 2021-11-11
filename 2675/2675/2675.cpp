@@ -14,5 +14,6 @@ main () {
 	}
 }
 /*
+scanf 합치기
 scanf(" %d", &R); scanf(" %s", S);는 scanf( "%d %s", &R, S);로 줄일 수 있다.
 */
