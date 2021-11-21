@@ -1,4 +1,4 @@
-//incompletion code
+//completion code
 #include <iostream>
 using namespace std;
 int main(void) {
@@ -7,7 +7,7 @@ int main(void) {
     while (T--) {
         int k, n;
         cin >> k >> n;
-        int array[k + 1][n + 1];
+        int array[k + 1][n + 1] = { 0, };
         for (int i = 0; i < n + 1; i++) {
             array[0][i] = i;
         }
@@ -21,3 +21,8 @@ int main(void) {
         cout << array[k][n] << "\n";
     }
 }
+
+/*
+배열 초기화를 안해서 40분을 날려버린 문제.
+배열 꼭 초기화 해주자.
+*/
