@@ -1,17 +1,14 @@
-//incompletion code
+//completion code
 #include <iostream>
-int factorial(int x, int result) {
+int factorial(int x) {
     if (x == 1) {
-        return result;
+        return 1;
     }
-    else {
-        result *= x;
-        x--;
-        factorial(x - 1, result);
-    }
+    return x * factorial(x - 1);
 }
+
 main () {
     int N, result = 1;
     std::cin >> N;
-    std::cout << factorial(N, result);
+    std::cout << factorial(N);
 }
