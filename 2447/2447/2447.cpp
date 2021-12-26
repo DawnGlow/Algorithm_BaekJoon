@@ -1,39 +1,31 @@
-//incompletion code
+//못푼 문제
 #import <iostream>
 using namespace std;
-bool check(int a, int b, int N) {
-    if (N == 1) {
-        return true;
+void star(int i, int j, int num)
+{
+    if ((i / num) % 3 == 1 && (j / num) % 3 == 1) {
+        cout << ' ';
     }
-    if ((a > N / 3) && (a <= N * 2 / 3)  && (b > N / 3) && (b <= N * 2 / 3)) {
-        return true;
-    }
-    else {
-        if (check(a, b, N / 3)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+    else
+    {
+        if (num / 3 == 0)
+            cout <<'*';
+        else
+            star(i, j, num / 3);
     }
 }
-main () {
-    int N;
-    cin >> N;
-    for (int i = 1; i <= N; i++) {
-        for (int j = 1; j <= N; j++ ) {
-            if (check(i, j, N)) {
-                cout << " ";
-            }
-            /*
-            if ((i > N / 3) && (i <= N * 2 / 3)  && (j > N / 3) && (j <= N * 2 / 3)) {
-                cout << " ";
-            }
-            */
-            else {
-                cout << "*";
-            }
-        }
+main() {
+    int num;
+    cin >> num;
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < num; j++)
+            star(i, j, num);
         cout << '\n';
     }
 }
+
+/*
+재귀적으로 접근해야 풀 수 있었던 문제.
+main함수 구현은 비슷하게 했으나, star함수에서 if 조건문 안에 i / num 과 j / num을 구현하지 못했다.
+*/
