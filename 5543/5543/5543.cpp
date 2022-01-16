@@ -13,3 +13,4 @@ main() {
     a = min(a, b);
     cout << m + a - 50;
 }
+// 후위연산자는 pre-value의 사본이므로 l-value가 될 수 없다.
